@@ -30,16 +30,14 @@ io.on('connection', socket => {
 
 })
 
-var brandonData
-
 server.listen(80, _ => {
   console.log('listening')
 
-  brandonData = fs.readFileSync('brandonshoe.jpg').toString('base64')
+  //brandonData = fs.readFileSync('brandonshoe.jpg').toString('base64')
 
   toggle = false
 
   setInterval(_ => {
-    io.emit('update img', brandonData)
+  //  io.emit('update img', brandonData)
   }, 100)
 })
