@@ -16,7 +16,7 @@
   socket.on('update img', data => {
     var img = document.getElementById('img-stream')
 
-    img.src = 'data:image/jpeg;base64,' + data
+    img.src = data
   })
 
   socket.on('type', data => {
