@@ -8,7 +8,9 @@
 </head>
 <body>
   <div id="type"></div>
-  <img id="img-stream" src="" alt="">
+  Text: <span id="ocr-out"></span>
+  <br>
+  <img id="img-stream" width="640" height="360" src="" alt="">
   <script src="https://cdn.socket.io/4.5.3/socket.io.min.js" integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" crossorigin="anonymous"></script>
 <script>
   const socket = io()
@@ -20,8 +22,8 @@
   })
 
   socket.on('type', data => {
-    var div = document.getElementById('type')
-    div.innerHTML += type
+    var div = document.getElementById('ocr-out')
+    div.innerHTML = data
   })
 </script>
 </body>
